@@ -1,0 +1,22 @@
+.color-page {
+	color:#563C37;
+}
+.border-bottom-hover:hover {
+	border-bottom: 1px solid #563C37;
+	color:#563C37;
+}	
+.background-page {
+	background: #563C37;
+}
+.color-page-white {
+	color:#fff;
+}
+.preview-background {	
+	background: #EFECEB;
+}
+@media screen and (max-width: 768px) {
+	#myModal2 .modal-dialog .modal-body{
+		height: 100vh;
+		overflow-y: auto;
+	}
+}
