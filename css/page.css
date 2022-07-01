@@ -15,8 +15,28 @@
 	background: #EFECEB;
 }
 @media screen and (max-width: 768px) {
+	#myModal1 .modal-dialog .modal-body{
+		height: 100vh;
+		overflow-y: auto;
+	}
+}
+@media screen and (max-width: 768px) {
 	#myModal2 .modal-dialog .modal-body{
 		height: 100vh;
 		overflow-y: auto;
 	}
+}
+
+/* As there is a padding for img in custom.css, we need to adjust padding for captions too. */
+.biography figcaption {
+	padding-left: 30px;
+}
+/* To group name and years of life, make a gap after the dates, not before. */
+.block-date p {
+	padding-top: 0;
+	padding-bottom: 7%;
+}
+/* Background for all biography text. */
+#biogr {
+	background-color: #EFECEB;
 }
