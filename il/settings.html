@@ -1,0 +1,118 @@
+<html>
+<head><title>Настройка</title>
+</head>
+<body leftmargin=0 topmargin=0 marginheight=0 marginwidth=0 bgcolor="#202020" link="#007020" vlink="#007020" alink="#00C050">
+<center>
+<table height="100%" bgcolor="#D7D7D7" width="80%" cellspacing="0" cellpadding="0" border="0">
+<tr><td height="2" bgcolor="#CDCDCD"></td></tr>
+<tr><td height="1" bgcolor="#A5A5A5"></td></tr> 
+<tr><td height="1" bgcolor="#000000"></td></tr> 
+<tr><td bgcolor="#333333" background="bgt.png" height="150"><img src="bg.jpg"></td></tr>
+<tr><td height="1" bgcolor="#D1D1D1"></td></tr>
+<tr><td height="1" bgcolor="#000000"></td></tr>
+<tr><td height="3" bgcolor="#B4B4B4"></td></tr>
+<tr><td height="1" bgcolor="#818181"></td></tr>
+<tr><td height="1" bgcolor="#BBBBBB"></td></tr>
+<tr><td height="18" bgcolor="#A6A4A3" background="tb.bmp" align="center"><font face="Verdana" size="-2"><a href="index.html">Главная страница</a>  <img src="box.gif">  <a href="description.html">Описание</a>  <img src="box.gif">  <a href="usage.html">Использование</a>  <img src="box.gif">  <a href="settings.html">Настройка</a>  <img src="box.gif">  <a href="download.html">Загрузка</a></font></td></tr>
+<tr><td height="1" bgcolor="#000000"></td></tr>
+<tr><td height="100%">
+<table cellspacing="5" height="100%"><tr><td valign="top">
+
+
+<h1>Настройка</h1>
+
+
+
+
+<p>Вследствие отсутствия GUI-настройщика все установки производятся путем правки конфигурационного файла.</p>
+<p>Чтобы настроить параметры, нужно удедиться, что InductionLines закрыта, затем открыть файл <a href="#file">settings.ini</a> в текстовом редакторе (например, Блокноте). Файл имеет стандартную структуру.</p>
+<p>Изменяя соотношения между <u>Length</u> и <u>Radius</u>, можно сделать катушку "толще" или "вытянутее". <u>Turns</u> определяет количество витков и может быть нецелым (при 0.000001 катушка практически превращается в прямой проводник и т.п.). <u>Segments</u> и <u>StepLength</u> управляют точностью и качеством картинки.</p>
+<p>Любая линия может быть описана ограниченным числом точек. Это число задается параметром <u>MaxVertex</u>. Поэтому иногда за MaxVertex шагов программе не удается получить замкнутую линию, и получается линия, не дорисованная до конца. Такие линии можно не выводить на экран, если <u>DrawCorrupted</u> установить в 0.</p>
+<p>По обьективным причинам линии обычно не получаются замкнутыми. Иногда ситуацию можно исправить установкой параметра <u>AutoConnect</u> в 1.</p>
+<font color="#550000">
+<p>Максимальная длина значения каждого параметра - 15 символов. НЕ БОЛЬШЕ!</p>
+<p>Ввод значений не проверяется в программе на корректность. Эксперименты с очень большими/малыми числами могут закончиться полным зависанием.</p>
+</font>
+</p>
+<a name="file"></a>
+<h2>Пример файла <i>settings.ini</i></h2>
+
+<pre>
+[Solenoid]
+Length=5.0
+</pre>
+<blockquote>; длина катушки (в условных единицах) - действительное число</blockquote><br>
+
+<pre>
+Radius=1.0
+</pre>
+<blockquote>; радиус катушки - действительное число</blockquote><br>
+
+<pre>
+Turns=20
+</pre>
+<blockquote>; количество витков - действительное число</blockquote><br>
+
+<pre>
+Segments=2000
+</pre>
+<blockquote>; на сколько элементарных частей при расчете индукции будет разбита катушка - натуральное число</blockquote><br>
+
+<pre>
+[Lines]
+LineNumber=6
+</pre>
+<blockquote>; количество линий (быстрее работает с четными числами, т.к. при нечетном числе одна линия будет выходить точно из центра катушки) - целое неотрицательное число</blockquote><br>
+
+<pre>
+StepLength=0.01
+</pre>
+<blockquote>; длина малого отрезка линии (чем меньше, тем точнее) - действительное число</blockquote><br>
+
+<pre>
+MaxVertex=10000
+</pre>
+<blockquote>; макс. количество отрезков, из которых может состоять одна линия (натуральное число), или сколько вершин (vertex) будет выделено при построении одной линии в вершинном буфере. Не следует перебарщивать с этим числом.</blockquote><br>
+
+<pre>
+DrawCorrupted=1
+</pre>
+<blockquote>; если 0, то не дорисованные до "возвращения" в катушку линии не выводятся на экран. Значения - только 0 и 1.</blockquote><br>
+
+<pre>
+AutoConnect=1
+</pre>
+<blockquote>; в несложных случаях позволяет замыкать линии автоматически (работает только если конец линии находится в катушке). Значения - только 0 и 1.</blockquote><br>
+
+<pre>
+[View]
+AngleStep=0.017453292
+</pre>
+<blockquote>;  шаг изменения углов (в радианах!). Уменьшение поможет, если при нажатии стрелок углы обзора меняются слишком быстро. Действительное число.</blockquote><br>
+
+<pre>
+DistanceStep=0.01
+</pre>
+<blockquote>;  шаг изменения расстояния (в условных единицах). Уменьшение поможет, если при нажатии PgUp/PgDown расстояние меняется слишком быстро. Действительное число.</blockquote>
+
+
+</pre>
+
+
+
+</td></tr></table>
+
+</td> 
+</tr>
+<tr><td height="1" bgcolor="#000000"></td></tr>
+<tr><td height="4" bgcolor="#7D7D7D"></td></tr>
+<tr><td height="1" bgcolor="#000000"></td></tr>
+<tr><td height="1" bgcolor="#A4A4A4"></td></tr>
+<tr><td height="2" bgcolor="#CCCCCC"></td></tr>
+<tr><td height="1" bgcolor="#666666"></td></tr>
+<tr><td height="2" bgcolor="#7D7D7D"></td></tr>
+<tr><td height="1" bgcolor="#CCCCCC"></td></tr>
+<tr><td height="17" bgcolor="#B6B6B6"><font size="-2" face="Verdana" color="black">&nbsp;&copy; Сергей Соболь, 11ФМ5, 2009 г.</font></td></tr>
+<tr><td height="1" bgcolor="#929292"></td></tr>
+</table></center>
+</body></html>
