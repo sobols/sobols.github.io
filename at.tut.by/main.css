@@ -1,0 +1,84 @@
+p {
+   font-family: verdana, arial, sans-serif;
+   font-size: 10pt;
+   text-align: justify; 
+   color: black;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   margin-left: 0px;  
+   font-weight: normal;
+}
+h4 {
+   font-family: verdana, arial, sans-serif;
+   font-size: 8pt;
+   text-align: justify; 
+   color: black;
+   margin-top: 1px;
+   margin-bottom: 1px;
+   margin-left: 0px;   
+   font-weight: normal;   
+}
+h3 {
+   font-family: verdana, arial, sans-serif;
+   font-size: 10pt;
+   text-align: justify; 
+   color: black;
+   margin-top: 5px;
+   margin-bottom: 0px;
+   margin-left: 20px;   
+   font-weight: bold;
+}
+h2 {
+   font-family: verdana, arial, sans-serif;
+   font-size: 16pt;
+   text-align: left;
+   color: #1b61d0;
+   margin-top: 40px; 
+   margin-bottom: 5px;
+   margin-left: 30px;   
+   font-weight: normal;   
+}
+
+h1 {
+   font-family: verdana, arial, sans-serif;
+   font-size: 20pt;
+   text-align: left;
+   color: black;
+   margin-top: 5px; 
+   margin-bottom: 5px;
+   margin-left: 30px;   
+   font-weight: normal;   
+}
+
+
+.header:link {
+   font-family: verdana, arial, sans-serif;
+   font-size: 8pt;
+   text-align: center;
+   color: black;
+   font-weight: normal; 
+}
+.header:visited {
+   font-family: verdana, arial, sans-serif;
+   font-size: 8pt;
+   text-align: center;
+   color: black;
+   font-weight: normal; 
+}
+.header:hover {
+   font-family: verdana, arial, sans-serif;
+   font-size: 8pt;
+   text-align: center;   
+   color: #404040;
+   font-weight: normal; 
+}
+
+a:link {
+   color: #174ea6;
+}
+a:visited {
+   color: #174ea6;
+}
+a:hover {
+   color:  #1b61d0;
+}
